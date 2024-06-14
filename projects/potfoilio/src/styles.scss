@@ -44,24 +44,14 @@ app-root {
 	padding: 0;
 }
 
-app-root {
-	display: flex;
-	flex-direction: column;
-}
-
-app-home {
-	min-height: 500px;
-}
-
 body {
-	background-color: $color-gray2;
 	font-family: "Poppins";
 }
 
 // desktop version
 @media screen and (min-width: 680px) {
 	.home {
-		padding: 16px 100px 32px 100px;
+		padding: 64px 100px 32px 100px;
 
 		.intro {
 			width: 50%;
@@ -69,6 +59,7 @@ body {
 	}
 
 	.toolbar {
+		padding: 0 100px 0 100px;
 		i {
 			display: none;
 		}
@@ -94,6 +85,7 @@ body {
 	}
 
 	.toolbar {
+		padding: 0 16px 0 16px;
 		i {
 			display: block;
 		}
