@@ -1,0 +1,46 @@
+@import "../../varibles.scss";
+
+:host {
+	display: flex;
+	flex-direction: column;
+
+	.home-container {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+
+		.intro {
+			.hello {
+				font-family: 'Allura';
+				font-size: 40px;
+				height: 32px;
+				display: inline-block;
+				font-weight: bold;
+			}
+
+			.fed {
+				font-weight: bold;
+			}
+
+			.name {
+				font-size: 32px;
+				font-weight: bold;
+				line-height: 32px;
+			}
+
+			.content {
+				margin-top: 16px;
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+				font-size: 12px;
+				color: $color-dark1;
+
+				p {
+					font-family: "Poppins";
+				}
+			}
+		}
+	}
+}
+
