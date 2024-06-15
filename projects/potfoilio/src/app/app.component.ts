@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @Component({
@@ -14,7 +16,9 @@ import { SkillsComponent } from './skills/skills.component';
     HomeComponent,
     ToolbarComponent,
     AboutComponent,
-    SkillsComponent
+    SkillsComponent,
+    ExperienceComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
