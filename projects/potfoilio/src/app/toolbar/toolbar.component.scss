@@ -1,29 +1,34 @@
 @import "../../varibles.scss";
 :host {
-	height: 48px;
+	height: 64px;
 	font-weight: bold;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color:$font-color;
-	background-color: white;
+	color:$black;
+	background-color: $white;
 	width:100%;
 	font-size: 16px;
 	position: fixed;
 
-	i{
-		font-size: 32px;
-		color: $font-color;
+	.icon{
+		font-size: 24px;
+		color:$black;
 		line-height: 48px;
 	}
 	li{
 		display: inline-block;
-		margin-right: 16px;
+		margin-left: 16px;
 		font-size: 12px;
 	}
 	a{
 		text-decoration: none;
-		color:$font-color;
+		color:$black;
+	}
+	button {
+		color: $white;
+		background-color: $peach;
+		margin-left: 16px;
 	}
 }
 

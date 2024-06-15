@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { MatButtonModule } from '@angular/material/button';
+import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, NgOptimizedImage],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

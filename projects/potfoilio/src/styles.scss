@@ -49,17 +49,14 @@ body {
 }
 
 // desktop version
-@media screen and (min-width: 680px) {
+@media screen and (width > 680px) {
 	.home {
 		padding: 64px 100px 32px 100px;
-
-		.intro {
-			width: 50%;
-		}
 	}
 
 	.toolbar {
 		padding: 0 100px 0 100px;
+
 		i {
 			display: none;
 		}
@@ -67,25 +64,22 @@ body {
 		.nav-links {
 			display: block;
 		}
+	}
+
+	.align {
+		padding: 32px 100px 32px 100px;
 	}
 }
 
 // mobile version
-@media screen and (max-width: 680px) {
+@media screen and (width <=680px) {
 	.home {
 		padding: 8px 16px 0 16px;
-
-		.intro {
-			width: 100%;
-		}
-
-		.image {
-			display: none;
-		}
 	}
 
 	.toolbar {
 		padding: 0 16px 0 16px;
+
 		i {
 			display: block;
 		}
@@ -95,4 +89,7 @@ body {
 		}
 	}
 
+	.align {
+		padding: 24px 16px 16px 24px;
+	}
 }

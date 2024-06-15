@@ -2,45 +2,50 @@
 
 :host {
 	display: flex;
-	background-color: $color-gray2;
+	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	background-image: url('../desktop.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 	min-height: 500px;
+	color: $white;
+	text-align: center;
 
-	.intro {
-		color: $font-color;
+	.hello {
+		font-family: 'Allura';
+		font-size: 40px;
+		height: 32px;
+		display: inline-block;
+		font-weight: bold;
+		color: $peach;
+	}
 
-		.hello {
-			font-family: 'Allura';
-			font-size: 40px;
-			height: 32px;
-			display: inline-block;
-			font-weight: bold;
+	.fed {
+		font-weight: bold;
+	}
+
+	.name {
+		font-size: 32px;
+		font-weight: bold;
+		line-height: 32px;
+	}
+
+	.content {
+		margin-top: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		p {
+			font-family: "Poppins";
+			font-size: $paragraph-font-size;
 		}
+	}
 
-		.fed {
-			font-weight: bold;
-		}
-
-		.name {
-			font-size: 32px;
-			font-weight: bold;
-			line-height: 32px;
-		}
-
-		.content {
-			margin-top: 16px;
-			display: flex;
-			flex-direction: column;
-			gap: 24px;
-			font-size: 12px;
-
-			p {
-				font-family: "Poppins";
-			}
-		}
-		button{
-			color: $font-color;
-			margin-top:16px;
-		}
+	button {
+		color: $white;
+		background-color: $peach;
+		margin-top: 16px;
 	}
 }

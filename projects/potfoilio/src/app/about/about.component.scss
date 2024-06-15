@@ -1,0 +1,14 @@
+@import "../../varibles.scss";
+
+:host {
+	display: block;
+	// background-color:$peach;
+	// color: $white;
+
+	h2{
+		color: $peach;
+	}
+	p{
+		font-size: $paragraph-font-size;
+	}
+}
