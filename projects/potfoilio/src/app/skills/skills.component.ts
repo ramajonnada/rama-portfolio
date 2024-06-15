@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TECHNOLOGIES } from './const/skills';
+import { MatCardModule } from '@angular/material/card';
 
 interface TechSpec {
   logo: string;
@@ -8,14 +10,10 @@ interface TechSpec {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,MatCardModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-  technologies: TechSpec[] = [
-    {
-      logo: "fa fa-brands fa-js", name: 'Javascript'
-    }
-  ];
+  technologies: TechSpec[] = TECHNOLOGIES;
 }

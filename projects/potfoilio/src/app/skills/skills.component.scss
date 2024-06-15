@@ -1,10 +1,25 @@
 @import "../../varibles.scss";
 
-:host{
-	color:$black;
-	i{
-		width: 50px;
-		height: 50px;
-		color: $peach;
+:host {
+	color: $black;
+
+	.techs {
+		display: flex;
+		flex-wrap: wrap;
+		gap:32px;
+
+		.tech {
+			display: flex;
+			align-items: center;
+			width:128px;
+			height: 128px;
+			padding:16px;
+			justify-content: center;
+			gap:8px;
+			i {
+				font-size: 32px;
+				color: $peach;
+			}
+		}
 	}
 }

@@ -1,7 +1,7 @@
 <h2>Skills</h2>
-<div>
-	<span *ngFor="let tech of technologies">
+<div class="techs">
+	<mat-card class="tech" *ngFor="let tech of technologies">
 		<i [class]="tech.logo"></i>
 		{{tech.name}}
-	</span>
+	</mat-card>
 </div>
