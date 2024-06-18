@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { FooterComponent } from './footer/footer.component';
+import { WorkflowComponent } from './workflow/workflow.component';
 
 
 @Component({
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     SkillsComponent,
     ExperienceComponent,
-    FooterComponent
+    FooterComponent,
+    WorkflowComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

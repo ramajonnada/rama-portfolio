@@ -1,0 +1,27 @@
+@import '../../varibles.scss';
+
+:host {
+	display: block;
+	width: 100%;
+
+	>div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	mat-card {
+		padding: 16px;
+		max-width: 500px;
+		font-size: $paragraph-font-size;
+		margin-top: 24px;
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+
+		.line {
+			border: 1px solid $peach;
+		}
+	}
+
+}

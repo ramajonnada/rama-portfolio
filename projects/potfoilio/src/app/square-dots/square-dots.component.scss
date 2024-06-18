@@ -1,0 +1,31 @@
+@import "../../varibles.scss";
+
+:host {
+
+	.heading {
+		display: flex;
+		align-items: center;
+
+		
+
+		.dots-container {
+			position:absolute;
+			right:0px;
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+
+			.dots {
+				display: block;
+				width: 80px;
+				border: dotted 4px $peach;
+				height: 14px;
+			}
+		}
+
+		.left{
+			position:absolute;
+			left:0px;
+		}
+	}
+}

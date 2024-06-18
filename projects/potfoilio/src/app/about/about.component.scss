@@ -1,14 +1,22 @@
 @import "../../varibles.scss";
 
 :host {
-	display: block;
-	// background-color:$peach;
-	// color: $white;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 
-	h2{
-		color: $peach;
-	}
-	p{
-		font-size: $paragraph-font-size;
+	.paragraph-container {
+		display: flex;
+		gap: 16px;
+
+		.paragraph-content {
+			>* {
+				margin-bottom: 16px;
+			}
+		}
+
+		p {
+			font-size: $paragraph-font-size;
+		}
 	}
 }

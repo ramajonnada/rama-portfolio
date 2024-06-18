@@ -31,27 +31,57 @@ $potfoilio-theme: mat.define-theme((color: (theme-type: light,
 // @include mat.color-variants-backwards-compatibility($potfoilio-theme);
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body,
-app-root {
-	height: 100%;
-	width: 100%;
-}
-
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: "Poppins";
 }
 
-body {
-	font-family: "Poppins";
+p,
+ul {
+	line-height: 24px;
+}
+
+@media screen and (width < 800px) {
+
+	.paragraph-container {
+		flex-direction: column-reverse;
+		text-align: center;
+
+		.about-image {
+			height: 448px !important;
+		}
+	}
+}
+
+@media screen and (width > 1000px) {
+	app-root {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
 }
 
 // desktop version
 @media screen and (width > 680px) {
 	.home {
 		padding: 64px 100px 32px 100px;
+
+		.icons {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: space-between;
+			gap: 16px;
+
+			i {
+				font-size: 32px;
+			}
+		}
+	}
+
+	.about-image {
+		width:320px;
 	}
 
 	.toolbar {
@@ -67,14 +97,25 @@ body {
 	}
 
 	.align {
-		padding: 32px 100px 32px 100px;
+		padding: 64px 100px 0px 100px;
 	}
 }
 
 // mobile version
 @media screen and (width <=680px) {
+	$paragraph-font-size: 10px;
+
 	.home {
-		padding: 8px 16px 0 16px;
+		padding: 8px 16px 16px 16px;
+		color: black;
+
+		.icons {
+			display: none;
+
+			i {
+				font-size: 24px;
+			}
+		}
 	}
 
 	.toolbar {
@@ -90,6 +131,10 @@ body {
 	}
 
 	.align {
-		padding: 24px 16px 16px 24px;
+		padding: 24px 24px 24px 32px;
+	}
+
+	.footer-container{
+		flex-direction: column;
 	}
 }

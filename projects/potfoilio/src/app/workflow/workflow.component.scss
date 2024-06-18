@@ -1,0 +1,13 @@
+@import '../../varibles.scss';
+:host{
+	display: block;
+	text-align: center;
+	mat-card{
+		background-color: $light-peach;
+		padding:16px;
+		align-items: center;
+		height: 180px;
+		display: flex;
+		flex-direction: row;
+	}
+}
