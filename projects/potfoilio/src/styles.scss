@@ -33,11 +33,17 @@ $potfoilio-theme: mat.define-theme((color: (theme-type: light,
 
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
 	font-family: "Poppins";
 }
-
+html{
+	scrollbar-width: 10px;
+	scroll-behavior: smooth;
+}
+body{
+	height: 100%;
+}
 p,
 ul {
 	line-height: 24px;
@@ -66,6 +72,7 @@ ul {
 @media screen and (width > 680px) {
 	.home {
 		padding: 64px 100px 32px 100px;
+		text-align: left;
 
 		.icons {
 			display: flex;
@@ -76,6 +83,7 @@ ul {
 
 			i {
 				font-size: 32px;
+				color: $white;
 			}
 		}
 	}
@@ -97,7 +105,7 @@ ul {
 	}
 
 	.align {
-		padding: 64px 100px 0px 100px;
+		padding: 64px 100px 16px 100px;
 	}
 }
 
@@ -107,8 +115,7 @@ ul {
 
 	.home {
 		padding: 8px 16px 16px 16px;
-		color: black;
-
+		text-align: center;
 		.icons {
 			display: none;
 

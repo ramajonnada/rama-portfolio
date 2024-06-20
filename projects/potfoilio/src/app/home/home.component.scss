@@ -3,13 +3,11 @@
 :host {
 	min-height: 600px;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	background-color: $black;
 	color: $white;
 	font-weight: bold;
-	text-align: left;
 
 	.hello {
 		font-family: 'Allura';
@@ -21,18 +19,7 @@
 	.name {
 		font-size: 40px;
 	}
-
-	.intro {
-		width:100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		img {
-			width: 300px;
-		}
-	}
-
+	
 	button {
 		color: $black;
 		background-color: $peach;
@@ -42,7 +29,6 @@
 	}
 
 	i:hover {
-		font-size: 48px;
-		// TODO need transition
+		color: $peach;
 	}
 }
