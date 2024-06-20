@@ -1,7 +1,17 @@
-<app-toolbar class="toolbar"></app-toolbar>
-<app-home class="home" id="home"></app-home>
-<app-about class="about align" id="about"></app-about>
-<app-skills class="align" id="skills"></app-skills>
-<app-experience class="align" id="experience"></app-experience>
-<!-- <app-workflow class="align"></app-workflow> -->
-<app-footer class="align" id="contact"></app-footer>
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+	<mat-drawer position="end" #drawer [mode]="'over'">
+		<ul class="nav-links" (click)="drawer.close()">
+			<li><a href="#about">About</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#experience">Experience</a></li>
+			<a href="#contact"><button mat-flat-button>Contact Me</button></a>
+		</ul>
+	</mat-drawer>
+	<app-toolbar class="toolbar" (openSidebar)="drawer.toggle()"></app-toolbar>
+	<app-home class="home" id="home"></app-home>
+	<app-about class="about align" id="about"></app-about>
+	<app-skills class="align" id="skills"></app-skills>
+	<app-experience class="align" id="experience"></app-experience>
+	<!-- <app-workflow class="align"></app-workflow> -->
+	<app-footer class="align" id="contact"></app-footer>
+</mat-drawer-container>

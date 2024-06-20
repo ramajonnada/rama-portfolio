@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -7,6 +7,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { FooterComponent } from './footer/footer.component';
 import { WorkflowComponent } from './workflow/workflow.component';
+import { MatDrawer, MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @Component({
@@ -20,11 +22,13 @@ import { WorkflowComponent } from './workflow/workflow.component';
     SkillsComponent,
     ExperienceComponent,
     FooterComponent,
-    WorkflowComponent
+    WorkflowComponent,
+    MatSidenavModule,
+    MatButtonModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'potfoilio';
+
 }

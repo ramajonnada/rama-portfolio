@@ -3,7 +3,7 @@
 :host {
 	display: flex;
 	flex-direction: column;
-	gap:24px;
+	gap: 24px;
 	background-color: $black;
 	color: $white;
 	margin-top: 48px;
@@ -14,10 +14,12 @@
 		justify-content: space-between;
 
 		.left {
-			width:300px;
-			>*{
+			width: 300px;
+
+			>* {
 				margin-bottom: 24px;
 			}
+
 			h5 {
 				font-size: 24px;
 			}
@@ -31,8 +33,18 @@
 					font-size: 16px;
 					color: $peach;
 				}
+
+
+			}
+
+			.social-icons {
+				i {
+					color: $white;
+				}
 			}
 		}
+
+
 
 		form {
 			flex-grow: 1;
@@ -49,7 +61,8 @@
 				width: 100%;
 				margin-bottom: 16px;
 			}
-			.button{
+
+			.button {
 				background-color: $peach;
 			}
 		}
