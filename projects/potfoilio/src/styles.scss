@@ -111,6 +111,12 @@ ul {
 		}
 	}
 
+	.footer {
+		.end {
+			justify-content: space-between;
+		}
+	}
+
 	.align {
 		padding: 64px 100px 16px 100px;
 	}
@@ -149,8 +155,17 @@ ul {
 		padding: 64px 24px 24px 32px;
 	}
 
-	.footer-container {
-		flex-direction: column;
+
+	.footer {
+		.footer-container {
+			flex-direction: column;
+		}
+
+		.end {
+			align-items: center;
+			flex-direction: column;
+			gap:8px;
+		}
 	}
 }
 

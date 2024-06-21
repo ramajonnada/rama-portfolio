@@ -44,15 +44,13 @@
 			}
 		}
 
-
-
 		form {
 			flex-grow: 1;
 			display: flex;
 			flex-direction: column;
 			align-items: end;
 
-			input {
+			input,textarea {
 				border-radius: 8px;
 				padding: 8px;
 				border-color: $peach;
@@ -70,7 +68,6 @@
 
 	.end {
 		display: flex;
-		justify-content: space-between;
 	}
 
 	.social-icons {
@@ -80,5 +77,9 @@
 		i {
 			font-size: 24px;
 		}
+	}
+
+	textarea{
+		resize: none;
 	}
 }
