@@ -6,6 +6,10 @@ import { SquareDotsComponent } from '../square-dots/square-dots.component';
 import { HeadingComponent } from '../heading/heading.component';
 
 interface TechSpec {
+  main: string,
+  skills: Skill[]
+}
+interface Skill {
   logo: string;
   name: string;
 }

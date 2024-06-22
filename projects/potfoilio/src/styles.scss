@@ -52,17 +52,17 @@ ul {
 	line-height: 24px;
 }
 
-@media screen and (width < 800px) {
+// @media screen and (width < 800px) {
 
-	.paragraph-container {
-		flex-direction: column-reverse;
-		text-align: center;
+// 	.paragraph-container {
+// 		flex-direction: column-reverse;
+// 		text-align: center;
 
-		.about-image {
-			height: 448px !important;
-		}
-	}
-}
+// 		.about-image {
+// 			width: 100%;
+// 		}
+// 	}
+// }
 
 @media screen and (width > 1000px) {
 	app-root {
@@ -75,10 +75,22 @@ ul {
 
 
 // desktop version
-@media screen and (width > 680px) {
+@media screen and (width > 840px) {
+	.toolbar {
+		padding: 0 100px 0 100px;
+
+		i {
+			display: none;
+		}
+
+		.nav-links {
+			display: block;
+		}
+	}
 
 	.home {
 		padding: 64px 100px 32px 100px;
+		justify-content: space-between;
 		text-align: left;
 
 		.icons {
@@ -99,18 +111,6 @@ ul {
 		width: 320px;
 	}
 
-	.toolbar {
-		padding: 0 100px 0 100px;
-
-		i {
-			display: none;
-		}
-
-		.nav-links {
-			display: block;
-		}
-	}
-
 	.footer {
 		.end {
 			justify-content: space-between;
@@ -120,22 +120,25 @@ ul {
 	.align {
 		padding: 64px 100px 16px 100px;
 	}
+
+	.workflow {
+		mat-card {
+			flex-direction: row;
+		}
+	}
 }
 
 // mobile version
-@media screen and (width <=680px) {
+@media screen and (width <=840px) {
 	$paragraph-font-size: 10px;
 
 	.home {
 		padding: 8px 16px 16px 16px;
 		text-align: center;
+		justify-content: center;
 
 		.icons {
 			display: none;
-
-			i {
-				font-size: 24px;
-			}
 		}
 	}
 
@@ -155,6 +158,18 @@ ul {
 		padding: 64px 24px 24px 32px;
 	}
 
+	.about {
+		.paragraph-container {
+			flex-direction: column-reverse;
+			align-items: center;
+			text-align: center;
+
+			.about-image {
+				width: 300px;
+			}
+		}
+	}
+
 
 	.footer {
 		.footer-container {
@@ -164,17 +179,13 @@ ul {
 		.end {
 			align-items: center;
 			flex-direction: column;
-			gap:8px;
+			gap: 8px;
 		}
 	}
-}
 
-html,
-body {
-	height: 100%;
-}
-
-body {
-	margin: 0;
-	font-family: Roboto, "Helvetica Neue", sans-serif;
+	.workflow {
+		mat-card {
+			flex-direction: column;
+		}
+	}
 }

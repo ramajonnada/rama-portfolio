@@ -1,13 +1,19 @@
 @import '../../varibles.scss';
-:host{
+
+:host {
 	display: block;
 	text-align: center;
-	mat-card{
-		background-color: $light-peach;
-		padding:16px;
+
+	mat-card {
+		background-color: $peach;
+		padding: 24px;
 		align-items: center;
-		height: 180px;
 		display: flex;
-		flex-direction: row;
+		gap: 16px;
+
+		mat-card {
+			background-color: $black;
+			color: $white;
+		}
 	}
 }
