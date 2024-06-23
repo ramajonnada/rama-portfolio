@@ -1,10 +1,27 @@
 <app-heading [heading]="'SKILLS'"></app-heading>
 <mat-card class="techs" *ngFor="let tech of technologies">
-	<span class="tech">{{tech.main}}</span>
+	<span>{{tech.main}}</span>
 	<div class="tech-skills">
-		<mat-card class="skill" *ngFor="let skill of tech.skills">
-			<i [class]="skill.logo"></i>
-			<span class="skill-name">{{skill.name}}</span>
-		</mat-card>
+		<div class="tech" *ngFor="let skill of tech.skills">
+			<div class="skill">
+				<div class="skill-card-inner" *ngIf="skill.number">
+					<div class="flip-card-front">
+						<i [class]="skill.logo"></i>
+						<span class="skill-name">{{skill.name}}</span>
+					</div>
+					<div class="flip-card-back">
+						<span>{{skill.number}}%</span>
+					</div>
+				</div>
+				<div class="skill-card" *ngIf="!skill.number && skill.logo">
+					<i [class]="skill.logo"></i>
+					<span class="skill-name">{{skill.name}}</span>
+				</div>
+				<div class="name skill-card" *ngIf="!skill.logo && !skill.number">
+					<span>{{skill.name}}</span>
+				</div>
+			</div>
+
+		</div>
 	</div>
 </mat-card>

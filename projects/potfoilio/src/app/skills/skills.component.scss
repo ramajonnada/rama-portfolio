@@ -27,36 +27,88 @@
 		}
 
 		.skill {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
 			width: 80px;
-			justify-content: center;
 			height: 80px;
-			padding: 16px;
-			gap: 6px;
-			background-color: black;
+			background-color: transparent;
+			color: $black;
 
-			span {
+			.flip-card-front {
+				background-color: black;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 6px;
+				color: $peach;
+			}
+
+			.skill-name {
 				font-size: 10px;
 				line-height: 10px;
 				text-align: center;
+				color: $white;
 			}
 
 			i {
 				font-size: 24px;
 				color: $peach;
 			}
+
+			.skill-card-inner {
+				border-radius: 8px;
+				position: relative;
+				width: 100%;
+				height: 100%;
+				transition: transform 0.6s;
+				transform-style: preserve-3d;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			}
+
+			.flip-card-front,
+			.flip-card-back {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				border-radius: 8px;
+			}
+
+			.flip-card-back {
+				background-color: $black;
+				color: $peach;
+				text-align: center;
+				transform: rotateY(180deg);
+
+				span {
+					font-size: 24px;
+					line-height: 80px;
+				}
+			}
+		}
+
+		.name {
+			color: $white;
+			line-height: 16px;
+			text-align: center;
+			font-size: 10px;
+			padding: 8px;
 		}
 	}
 
-	ul {
-		font-size: $paragraph-font-size;
-		list-style-type: none;
+	.skill:hover .skill-card-inner {
+		transform: rotateY(180deg);
+	}
 
-		i {
-			font-size: 14px;
-			margin-right: 16px;
-		}
+	.skill-card {
+		background-color: black;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 6px;
+		height: 100%;
+		border-radius: 8px;
+		color: $peach;
 	}
 }

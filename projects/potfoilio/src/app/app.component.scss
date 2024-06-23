@@ -3,7 +3,19 @@
 :host {
 
 	mat-drawer {
-		width: 100%;
+		width: 80%;
+		padding: 16px;
+
+		li {
+			height: 48px;
+			line-height: 48px;
+			font-weight: bold;
+		}
+
+		button {
+			background-color: $peach;
+			color: $black;
+		}
 	}
 
 	.nav-links {
