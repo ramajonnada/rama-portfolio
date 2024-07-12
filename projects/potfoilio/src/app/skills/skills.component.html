@@ -1,6 +1,6 @@
 <app-heading [heading]="'SKILLS'"></app-heading>
 <mat-card class="techs" *ngFor="let tech of technologies">
-	<span>{{tech.main}}</span>
+	<span class="tech-name">{{tech.main}}</span>
 	<div class="tech-skills">
 		<div class="tech" *ngFor="let skill of tech.skills">
 			<div class="skill">

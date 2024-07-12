@@ -9,8 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './square-dots.component.scss'
 })
 export class SquareDotsComponent {
-  @Input('heading') heading: string = '';
-  @Input('showHeading') showHeading: boolean = false;
   @Input('showleft') showLeft: boolean = false;
   @Input('showRight') showRight: boolean = false;
   @Input('showBoth') showBoth: boolean = false;

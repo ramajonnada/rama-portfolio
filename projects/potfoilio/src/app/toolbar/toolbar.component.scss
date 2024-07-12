@@ -1,6 +1,7 @@
 @import "../../varibles.scss";
 
 :host {
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 	height: 64px;
 	font-weight: bold;
 	display: flex;
@@ -23,6 +24,10 @@
 		display: inline-block;
 		margin-left: 32px;
 		font-size: 12px;
+	}
+
+	li:hover{
+		border-bottom: 2px solid $peach;
 	}
 
 	a {

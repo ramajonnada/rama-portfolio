@@ -71,9 +71,6 @@ ul {
 	}
 }
 
-
-
-
 // desktop version
 @media screen and (width > 840px) {
 	.toolbar {
@@ -134,8 +131,8 @@ ul {
 
 	.home {
 		padding: 8px 16px 16px 16px;
-		text-align: center;
 		justify-content: center;
+		text-align: center;
 
 		.icons {
 			display: none;
@@ -162,14 +159,12 @@ ul {
 		.paragraph-container {
 			flex-direction: column-reverse;
 			align-items: center;
-			text-align: center;
 
 			.about-image {
 				width: 300px;
 			}
 		}
 	}
-
 
 	.footer {
 		.footer-container {

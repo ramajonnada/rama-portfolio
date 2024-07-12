@@ -1,6 +1,7 @@
 @import "../../varibles.scss";
 
 :host {
+	display: block;
 
 	.heading {
 		display: flex;

@@ -1,6 +1,7 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
 	<mat-drawer position="end" #drawer [mode]="'over'">
 		<ul class="nav-links" (click)="drawer.close()">
+			<li><a routerLink="projects">Projects</a></li>
 			<li><a href="#about">About</a></li>
 			<li><a href="#skills">Skills</a></li>
 			<li><a href="#experience">Experience</a></li>
@@ -8,10 +9,7 @@
 		</ul>
 	</mat-drawer>
 	<app-toolbar class="toolbar" (openSidebar)="drawer.toggle()"></app-toolbar>
-	<app-home class="home" id="home"></app-home>
-	<app-about class="about align" id="about"></app-about>
-	<app-skills class="align" id="skills"></app-skills>
-	<app-workflow class="align workflow"></app-workflow>
-	<app-experience class="align" id="experience"></app-experience>
+	<router-outlet></router-outlet>
+	<!-- <img src="black-image.png" alt="black-image" class="black-bg"> -->
 	<app-footer class="align footer" id="contact"></app-footer>
 </mat-drawer-container>
