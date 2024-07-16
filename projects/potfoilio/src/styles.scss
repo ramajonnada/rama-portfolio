@@ -52,17 +52,17 @@ ul {
 	line-height: 24px;
 }
 
-// @media screen and (width < 800px) {
+@media screen and (width < 1000px) {
 
-// 	.paragraph-container {
-// 		flex-direction: column-reverse;
-// 		text-align: center;
+	.paragraph-container {
+		flex-direction: column-reverse;
+		align-items: center;
 
-// 		.about-image {
-// 			width: 100%;
-// 		}
-// 	}
-// }
+		.about-image {
+			width:300px;
+		}
+	}
+}
 
 @media screen and (width > 1000px) {
 	app-root {
@@ -102,10 +102,6 @@ ul {
 				color: $white;
 			}
 		}
-	}
-
-	.about-image {
-		width: 320px;
 	}
 
 	.footer {
@@ -153,17 +149,6 @@ ul {
 
 	.align {
 		padding: 64px 24px 24px 32px;
-	}
-
-	.about {
-		.paragraph-container {
-			flex-direction: column-reverse;
-			align-items: center;
-
-			.about-image {
-				width: 300px;
-			}
-		}
 	}
 
 	.footer {

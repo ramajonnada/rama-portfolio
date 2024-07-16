@@ -4,14 +4,16 @@
 	display: block;
 	text-align: center;
 
-	mat-card {
+	>mat-card {
 		background-color: $peach;
 		padding: 24px;
 		align-items: center;
+		font-size:$paragraph-font-size;
 		display: flex;
 		gap: 16px;
 
 		mat-card {
+			padding: 24px;
 			background-color: $black;
 			color: $white;
 		}

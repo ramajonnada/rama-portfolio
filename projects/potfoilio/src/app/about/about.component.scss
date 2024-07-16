@@ -10,8 +10,10 @@
 		gap: 16px;
 
 		.paragraph-content {
+			text-align: justify;
+
 			>* {
-				margin-bottom: 16px;
+				margin-top: 16px;
 			}
 		}
 

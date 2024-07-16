@@ -10,5 +10,15 @@ import { HeadingComponent } from '../heading/heading.component';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
+  screenWidth!: number;
+  screenHeight!: number;
+  ngOnInit() {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+  }
 
+  ngAfterViewInit(){
+    console.log('height',this.screenHeight);
+    console.log('width', this.screenWidth);
+  }
 }
