@@ -15,19 +15,16 @@ export const TECHNOLOGIES = [
 		main: 'Back-end Development',
 		skills: [
 			{ logo: 'fa-brands fa-python', name: 'Python', number: 50 },
-		]
-	},
-	{
-		main: 'Database Management',
-		skills: [
-			{ logo: 'fa-solid fa-database', name: 'SQL', number: 60 },
+			{ logo: 'fa-brands fa-node', name: 'Node JS', number: 50 },
+			{ logo: 'fa-brands fa-node', name: 'Node JS', number: 50 }			
 		]
 	},
 	{
 		main: 'Other',
 		skills: [
+			{ logo: 'fa-solid fa-database', name: 'SQL', number: 60 },
 			{ logo: 'fa-brands fa-github', name: 'Github' },
-			{ name: 'RESTful APIs' }
+			{ name: 'RESTful APIs' },
 		]
 	}
 
