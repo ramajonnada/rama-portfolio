@@ -16,7 +16,7 @@ export const TECHNOLOGIES = [
 		skills: [
 			{ logo: 'fa-brands fa-python', name: 'Python', number: 50 },
 			{ logo: 'fa-brands fa-node', name: 'Node JS', number: 50 },
-			{ logo: 'fa-brands fa-node', name: 'Node JS', number: 50 }			
+			{ logo: 'fa-brands fa-node', name: 'Express JS', number: 50 }			
 		]
 	},
 	{
