@@ -4,6 +4,7 @@ import { TECHNOLOGIES } from './const/skills';
 import { HeadingComponent } from '../heading/heading.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SquareDotsComponent } from '../square-dots/square-dots.component';
 
 interface TechSpec {
   main: string,
@@ -17,7 +18,7 @@ interface Skill {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, HeadingComponent, MatCardModule, MatProgressSpinnerModule],
+  imports: [CommonModule, SquareDotsComponent, HeadingComponent, MatCardModule, MatProgressSpinnerModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })

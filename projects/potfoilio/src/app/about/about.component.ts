@@ -5,7 +5,7 @@ import { HeadingComponent } from '../heading/heading.component';
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [HeadingComponent],
+  imports: [HeadingComponent, SquareDotsComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
@@ -17,8 +17,8 @@ export class AboutComponent {
     this.screenHeight = window.innerHeight;
   }
 
-  ngAfterViewInit(){
-    console.log('height',this.screenHeight);
+  ngAfterViewInit() {
+    console.log('height', this.screenHeight);
     console.log('width', this.screenWidth);
   }
 }

@@ -1,4 +1,5 @@
 <app-heading [heading]="'SKILLS'"></app-heading>
+<app-square-dots class="square-dots" [showleft]="true"></app-square-dots>
 <mat-card class="techs" *ngFor="let tech of technologies">
 	<span class="tech-name">{{tech.main}}</span>
 	<div class="tech-skills">
@@ -25,3 +26,4 @@
 		</div>
 	</div>
 </mat-card>
+<app-square-dots class="square-dots" [showRight]="true"></app-square-dots>

@@ -43,7 +43,9 @@ html {
 	scroll-behavior: smooth;
 }
 
-body {
+body,
+html,
+app-root {
 	height: 100%;
 }
 
@@ -120,6 +122,10 @@ ul {
 // mobile version
 @media screen and (width <=840px) {
 	$paragraph-font-size: 10px;
+
+	.square-dots {
+		display: none !important;
+	}
 
 	.home {
 		padding: 8px 16px 16px 16px;
