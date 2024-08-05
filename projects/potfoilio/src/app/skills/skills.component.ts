@@ -6,11 +6,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SquareDotsComponent } from '../square-dots/square-dots.component';
 
-interface TechSpec {
+export interface TechSpec {
   main: string,
   skills: Skill[]
 }
 interface Skill {
+  image?:string,
   logo?: string;
   name: string;
   number?: number;

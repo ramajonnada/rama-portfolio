@@ -7,7 +7,12 @@
 			<div class="skill">
 				<div class="skill-card-inner" *ngIf="skill.number">
 					<div class="flip-card-front">
-						<i [class]="skill.logo"></i>
+						<ng-container *ngIf="skill.logo">
+							<i [class]="skill.logo"></i>
+						</ng-container>
+						<ng-container *ngIf="skill.image">
+							<img [src]="skill.image" />
+						</ng-container>
 						<span class="skill-name">{{skill.name}}</span>
 					</div>
 					<div class="flip-card-back">
@@ -18,11 +23,10 @@
 					<i [class]="skill.logo"></i>
 					<span class="skill-name">{{skill.name}}</span>
 				</div>
-				<div class="name skill-card" *ngIf="!skill.logo && !skill.number">
+				<div class="name skill-card" *ngIf="!skill.logo&& !skill.image && !skill.number">
 					<span>{{skill.name}}</span>
 				</div>
 			</div>
-
 		</div>
 	</div>
 </mat-card>
