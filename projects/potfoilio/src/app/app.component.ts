@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { SquareDotsComponent } from './square-dots/square-dots.component';
+import { rama } from './rama';
 
 
 @Component({
@@ -23,5 +24,11 @@ import { SquareDotsComponent } from './square-dots/square-dots.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent extends rama implements rama{
+  constructor(){
+    super(4);
+    console.log(this.id);
+  }
+
+
 }

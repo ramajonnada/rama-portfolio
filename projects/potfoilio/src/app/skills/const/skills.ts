@@ -21,6 +21,7 @@ export const TECHNOLOGIES: TechSpec[] = [
 			{ logo: 'fa-brands fa-node', name: 'Node JS', number: 50 },
 			{ image: "https://img.icons8.com/ios/50/000000/express-js.png", name: 'Express JS', number: 50 },
 			{ logo: 'fa-solid fa-database', name: 'SQL', number: 60 },
+			
 			{ name: 'RESTful APIs' },
 		]
 	},
