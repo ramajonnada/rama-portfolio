@@ -1,5 +1,4 @@
-<app-heading [heading]="'SKILLS'"></app-heading>
-<app-square-dots class="square-dots" [showleft]="true"></app-square-dots>
+<app-heading [heading]="'SKILLS'" [label]="'02 / Skills'"></app-heading>
 <mat-card class="techs" *ngFor="let tech of technologies">
 	<span class="tech-name">{{tech.main}}</span>
 	<div class="tech-skills">
@@ -23,11 +22,10 @@
 					<i [class]="skill.logo"></i>
 					<span class="skill-name">{{skill.name}}</span>
 				</div>
-				<div class="name skill-card" *ngIf="!skill.logo&& !skill.image && !skill.number">
+				<div class="name skill-card" *ngIf="!skill.logo && !skill.image && !skill.number">
 					<span>{{skill.name}}</span>
 				</div>
 			</div>
 		</div>
 	</div>
 </mat-card>
-<app-square-dots class="square-dots" [showRight]="true"></app-square-dots>

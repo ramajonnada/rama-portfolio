@@ -1,24 +1,34 @@
-<app-heading [heading]="'EXPERIENCE'" ></app-heading>
-<app-square-dots class="square-dots" [showleft]="true"></app-square-dots>
-<div>
-	<mat-card>
-		<div>Software Engineer</div>
-		<div class="line"></div>
-		<span>
-			<div>Xealink Works Private Limited, Hyderabad</div>
-			<div>Jan 2024 - Feb 2024</div>
-		</span>
-	</mat-card>
-	<mat-card>
-		<div>Junior Developer</div>
-		<div class="line"></div>
-		<span>
-			<div>Xealink Works Private Limited, Hyderabad</div>
-			<div>Mar 2022 - Dec 2023</div>
-		</span>
-	</mat-card>
+<app-heading [heading]="'EXPERIENCE'" [label]="'04 / Experience'"></app-heading>
+<div class="timeline">
+
+  <div class="timeline-item">
+    <div class="timeline-marker">
+      <div class="dot"></div>
+      <div class="line"></div>
+    </div>
+    <div class="timeline-card">
+      <div class="role">Frontend Developer &amp; Open Source Creator</div>
+      <div class="company-period">
+        <span class="company">Zyra UI · Hyderabad</span>
+        <span class="badge-current">Current</span>
+      </div>
+      <div class="period">April 2024 — Present</div>
+      <p>Building Zyra UI — a free, open-source Angular component library featuring design tokens, signals-first components, dark-mode-first theming, and WCAG 2.1 AA accessibility. Built for Angular 21 + SSR.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-marker">
+      <div class="dot"></div>
+    </div>
+    <div class="timeline-card">
+      <div class="role">Software Engineer</div>
+      <div class="company-period">
+        <span class="company">Xealink Works Private Limited · Hyderabad</span>
+      </div>
+      <div class="period">August 2022 — February 2024</div>
+      <p>Developed secure enterprise modules for project management tools, guided interns, and delivered responsive Angular applications with strong UI/UX standards.</p>
+    </div>
+  </div>
+
 </div>
-<app-square-dots class="square-dots" [showRight]="true"></app-square-dots>
-
-
-<!-- Copyright ©2024 All rights reserved | This template is made with  by Colorlib -->

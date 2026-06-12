@@ -1,173 +1,134 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
 @import "./varibles.scss";
-// Define the theme object.
-$potfoilio-theme: mat.define-theme((color: (theme-type: light,
-				primary: mat.$azure-palette,
-				tertiary: mat.$blue-palette,
-			),
-			density: (scale: 0,
-			)));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
+$potfoilio-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$green-palette,
+    tertiary: mat.$cyan-palette,
+  ),
+  density: (scale: 0),
+));
+
 :root {
-	@include mat.all-component-themes($potfoilio-theme);
+  @include mat.all-component-themes($potfoilio-theme);
 }
 
-// Comment out the line below if you want to use the pre-defined typography utility classes.
-// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
-// @include mat.typography-hierarchy($potfoilio-theme);
-
-// Comment out the line below if you want to use the deprecated `color` inputs.
-// @include mat.color-variants-backwards-compatibility($potfoilio-theme);
-/* You can add global styles to this file, and also import other style files */
-
 * {
-	box-sizing: border-box;
-	margin: 0px;
-	padding: 0px;
-	font-family: "Poppins";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .heading-font {
+  font-family: "Space Grotesk", "Inter", sans-serif;
 }
 
 html {
-	scrollbar-width: 10px;
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $accent-purple $bg-secondary;
 }
 
-body,
-html,
-app-root {
-	height: 100%;
+body {
+  background-color: $bg-primary;
+  color: $text-primary;
+  overflow-x: hidden;
 }
 
-p,
-ul {
-	line-height: 24px;
+body, html, app-root {
+  height: 100%;
 }
 
-@media screen and (width < 1000px) {
-
-	.paragraph-container {
-		flex-direction: column-reverse;
-		align-items: center;
-	}
+p, ul {
+  line-height: 1.7;
 }
 
-@media screen and (width > 1000px) {
-	app-root {
-		max-width: 1000px;
-		margin: 0 auto;
-	}
+// ── Scroll-triggered animations ──────────────────────────
+.anim-hidden {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
-// desktop version
+.anim-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// ── Section scroll offset for fixed navbar ────────────────
+[id] {
+  scroll-margin-top: 80px;
+}
+
+// Desktop
+@media screen and (width > 1280px) {
+  app-root {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (width < 840px) {
+  .paragraph-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+// Desktop layout overrides
 @media screen and (width > 840px) {
-	.toolbar {
-		padding: 0 100px 0 100px;
+  .toolbar {
+    padding: 0 80px;
+    i { display: none; }
+    .nav-links { display: block; }
+  }
 
-		i {
-			display: none;
-		}
+  .footer {
+    .end { justify-content: space-between; }
+  }
 
-		.nav-links {
-			display: block;
-		}
-	}
+  .align {
+    padding: 80px 80px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-	.home {
-		padding: 64px 100px 32px 100px;
-		justify-content: space-between;
-		text-align: left;
-
-		.icons {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-end;
-			justify-content: space-between;
-			gap: 16px;
-
-			i {
-				font-size: 32px;
-				color: $white;
-			}
-		}
-	}
-
-	.footer {
-		.end {
-			justify-content: space-between;
-		}
-	}
-
-	.align {
-		padding: 64px 100px 16px 100px;
-	}
-
-	.workflow {
-		mat-card {
-			flex-direction: row;
-		}
-	}
+  .workflow {
+    mat-card { flex-direction: row; }
+  }
 }
 
-// mobile version
-@media screen and (width <=840px) {
-	$paragraph-font-size: 10px;
+// Mobile layout overrides
+@media screen and (width <= 840px) {
+  .square-dots { display: none !important; }
 
-	.square-dots {
-		display: none !important;
-	}
+  .toolbar {
+    padding: 0 20px;
+    i { display: block; }
+    .nav-links { display: none; }
+  }
 
-	.home {
-		padding: 8px 16px 16px 16px;
-		justify-content: center;
-		text-align: center;
+  .align {
+    padding: 80px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-		.icons {
-			display: none;
-		}
-	}
+  .footer {
+    .footer-container { flex-direction: column; }
+    .end {
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
 
-	.toolbar {
-		padding: 0 16px 0 16px;
-
-		i {
-			display: block;
-		}
-
-		.nav-links {
-			display: none;
-		}
-	}
-
-	.align {
-		padding: 64px 24px 24px 32px;
-	}
-
-	.footer {
-		.footer-container {
-			flex-direction: column;
-		}
-
-		.end {
-			align-items: center;
-			flex-direction: column;
-			gap: 8px;
-		}
-	}
-
-	.workflow {
-		mat-card {
-			flex-direction: column;
-		}
-	}
+  .workflow {
+    mat-card { flex-direction: column; }
+  }
 }

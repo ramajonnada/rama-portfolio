@@ -1,21 +1,149 @@
 @import '../../varibles.scss';
 
 :host {
-	display: block;
-	text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-	>mat-card {
-		background-color: $peach;
-		padding: 24px;
-		align-items: center;
-		font-size:$paragraph-font-size;
-		display: flex;
-		gap: 16px;
+// ─────────────────────────────────────────────────────────
+// Process grid
+// ─────────────────────────────────────────────────────────
+.process-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  margin-top: 48px;
+  width: 100%;
+  max-width: 960px;
+  flex-wrap: wrap;
+}
 
-		mat-card {
-			padding: 24px;
-			background-color: $black;
-			color: $white;
-		}
-	}
+// ─────────────────────────────────────────────────────────
+// Step card
+// ─────────────────────────────────────────────────────────
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  width: 190px;
+  flex-shrink: 0;
+  transition: border-color 0.25s, background 0.25s, transform 0.25s;
+
+  &:hover {
+    border-color: rgba(16, 185, 129, 0.35);
+    background: rgba(16, 185, 129, 0.06);
+    transform: translateY(-4px);
+  }
+}
+
+.step-number {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: $text-muted;
+  text-transform: uppercase;
+}
+
+.step-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(20, 184, 166, 0.1));
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 20px;
+    background: linear-gradient(135deg, #6EE7B7, #2DD4BF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.step-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.step-desc {
+  font-size: 13px;
+  color: $text-secondary;
+  line-height: 1.7;
+}
+
+// ─────────────────────────────────────────────────────────
+// Arrow connector between steps
+// ─────────────────────────────────────────────────────────
+.step-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  margin-top: 60px;
+  color: $text-muted;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+// ─────────────────────────────────────────────────────────
+// Responsive
+// ─────────────────────────────────────────────────────────
+@media screen and (width <= 900px) {
+  .process-grid {
+    gap: 16px;
+  }
+
+  .step-connector {
+    display: none;
+  }
+
+  .process-step {
+    width: 160px;
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (width <= 600px) {
+  .process-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .process-step {
+    width: 100%;
+    max-width: 320px;
+    flex-direction: row;
+    text-align: left;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .step-icon {
+    flex-shrink: 0;
+  }
+
+  .step-number {
+    display: none;
+  }
+
+  .step-title,
+  .step-desc {
+    text-align: left;
+  }
 }

@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { NgOptimizedImage } from '@angular/common'
 import { WelcomeComponent } from '../welcome/welcome.component';
 import { AboutComponent } from '../about/about.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { WorkflowComponent } from '../workflow/workflow.component';
 import { ExperienceComponent } from '../experience/experience.component';
+import { AnimateOnScrollDirective } from '../animate-on-scroll.directive';
 
 @Component({
   selector: 'app-home',
@@ -15,11 +14,10 @@ import { ExperienceComponent } from '../experience/experience.component';
     AboutComponent,
     SkillsComponent,
     WorkflowComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    AnimateOnScrollDirective
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}

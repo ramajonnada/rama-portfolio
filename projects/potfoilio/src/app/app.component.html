@@ -1,12 +1,15 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
 	<mat-drawer position="end" #drawer [mode]="'over'">
+		<span class="drawer-brand">&#123; RAMA JONNADA &#125;</span>
 		<ul class="nav-links" (click)="drawer.close()">
 			<li><a routerLink="projects">Projects</a></li>
-			<li><a href="#about">About</a></li>
 			<li><a href="#skills">Skills</a></li>
+			<li><a href="#process">Process</a></li>
 			<li><a href="#experience">Experience</a></li>
-			<a href="#contact"><button mat-flat-button>Contact Me</button></a>
 		</ul>
+		<div class="contact-btn" (click)="drawer.close()">
+			<a href="#contact"><button mat-flat-button>Contact Me</button></a>
+		</div>
 	</mat-drawer>
 	<app-toolbar class="toolbar" (openSidebar)="drawer.toggle()"></app-toolbar>
 	<router-outlet></router-outlet>

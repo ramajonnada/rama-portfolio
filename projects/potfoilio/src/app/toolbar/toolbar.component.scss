@@ -1,42 +1,67 @@
 @import "../../varibles.scss";
 
 :host {
-	box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-	height: 64px;
-	font-weight: bold;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: $black;
-	background-color: $white;
-	width: 100%;
-	font-size: 16px;
-	position: fixed;
-	z-index: 20;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(8, 14, 10, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 
-	.icon {
-		font-size: 24px;
-		color: $black;
-		line-height: 48px;
-	}
+  .name a {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    background: linear-gradient(135deg, #6EE7B7, #2DD4BF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 
-	li {
-		display: inline-block;
-		margin-left: 20px;
-		font-size: 12px;
-	}
+  .icon {
+    font-size: 22px;
+    color: $text-primary;
+    cursor: pointer;
+    line-height: 48px;
+  }
 
-	li:hover{
-		border-bottom: 2px solid $peach;
-	}
+  li {
+    display: inline-block;
+    margin-left: 28px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
 
-	a {
-		text-decoration: none;
-		color: $black;
-	}
+    &:hover {
+      border-bottom: 2px solid $accent-cyan;
+    }
+  }
 
-	button {
-		background-color: $black;
-		margin-left: 16px;
-	}
+  a {
+    text-decoration: none;
+    color: $text-secondary;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $text-primary;
+    }
+  }
+
+  button {
+    background: linear-gradient(135deg, #10B981, #14B8A6) !important;
+    color: $white !important;
+    font-weight: 600;
+    margin-left: 20px;
+    border-radius: 8px;
+    padding: 0 18px;
+    border: none;
+    font-size: 13px;
+  }
 }

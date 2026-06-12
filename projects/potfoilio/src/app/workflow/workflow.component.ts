@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
+import { HeadingComponent } from '../heading/heading.component';
 
 @Component({
   selector: 'app-workflow',
   standalone: true,
-  imports: [MatCardModule],
+  imports: [HeadingComponent],
   templateUrl: './workflow.component.html',
   styleUrl: './workflow.component.scss'
 })
-export class WorkflowComponent {
-
-}
+export class WorkflowComponent {}

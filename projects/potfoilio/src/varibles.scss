@@ -1,20 +1,35 @@
-// $color-gray1: #f5f3f0;
-// $color-gray2: #edebe8;
-// $color-gray3: #cdcbcb;
+// ── Background ───────────────────────────────────────────
+$bg-primary:    #080E0A;
+$bg-secondary:  #0D1812;
+$bg-card:       rgba(16, 185, 129, 0.05);
+$bg-card-hover: rgba(16, 185, 129, 0.09);
 
-// $color-dark1: #656464;
-// $color-dark2: #434040;
-// $color-dark3: #232121;
-// $color-blue-dark: #0F1930;
+// ── Accent ───────────────────────────────────────────────
+$accent-purple: #10B981;
+$accent-cyan:   #14B8A6;
+$gradient:      linear-gradient(135deg, #10B981 0%, #14B8A6 100%);
+$gradient-soft: linear-gradient(135deg, rgba(16,185,129,0.12) 0%, rgba(20,184,166,0.12) 100%);
+$gradient-text: linear-gradient(135deg, #6EE7B7 0%, #2DD4BF 100%);
 
-$black: #000000;
-$white: #ffffff;
-// $peach: yellow;
+// ── Text ─────────────────────────────────────────────────
+$text-primary:        #F0FDF4;
+$text-secondary:      #94A3B8;
+$text-muted:          #4B5563;
+$paragraph-font-size: 15px;
 
-$peach:#f3b191;
-$light-peach: #f6d2be;
+// ── Border ───────────────────────────────────────────────
+$border-color:  rgba(16, 185, 129, 0.1);
+$border-accent: rgba(16, 185, 129, 0.35);
 
+// ── Shadow ───────────────────────────────────────────────
+$shadow:      0 8px 32px rgba(0, 0, 0, 0.5);
+$shadow-glow: 0 0 40px rgba(16, 185, 129, 0.18);
+$card-radius: 16px;
 
-$font-color-dark: #232121;
-$font-color-light: #cdcbcb;
-$paragraph-font-size: 12px;
+// ── Legacy aliases ────────────────────────────────────────
+$peach:            $accent-purple;
+$light-peach:      rgba(16, 185, 129, 0.12);
+$white:            #ffffff;
+$black:            #000000;
+$font-color-dark:  $text-primary;
+$font-color-light: $text-secondary;
