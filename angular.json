@@ -39,6 +39,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/rama-portfolio/",
               "budgets": [
                 {
                   "type": "initial",
