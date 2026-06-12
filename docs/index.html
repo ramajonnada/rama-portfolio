@@ -13,7 +13,19 @@
     <link rel="canonical" href="https://ramajonnada.github.io/rama-portfolio/">
 
     <!-- â”€â”€ Viewport â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
-    <base href="/rama-portfolio/">
+    
+  <script>
+    // Restore path encoded by 404.html redirect
+    (function() {
+      var p = window.location.search.match(/[?&]p=([^&]*)/);
+      if (p) {
+        var path = decodeURIComponent(p[1].replace(/~and~/g, '&'));
+        var q = window.location.search.match(/[?&]q=([^&]*)/);
+        var query = q ? '?' + decodeURIComponent(q[1].replace(/~and~/g, '&')) : '';
+        window.history.replaceState(null, null, '/rama-portfolio/' + path + query + window.location.hash);
+      }
+    })();
+  </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- â”€â”€ Open Graph (Facebook, LinkedIn previews) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
@@ -72,4 +84,5 @@
   <script src="polyfills-6EAL64PA.js" type="module"></script><script src="main-MVW5ZBXM.js" type="module"></script></body>
 
 </html>
+
 
