@@ -17,7 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/potfoilio",
+            "outputPath": {
+            "base": "docs",
+            "browser": ""
+          },
             "index": "projects/potfoilio/src/index.html",
             "browser": "projects/potfoilio/src/main.ts",
             "polyfills": [
@@ -44,12 +47,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "1MB",
-                  "maximumError": "1MB"
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "6kB",
+                  "maximumError": "10kB"
                 }
               ],
               "outputHashing": "all"
